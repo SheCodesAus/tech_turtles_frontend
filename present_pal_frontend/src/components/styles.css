@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-primary: #5B4B8A;    /* Purple */
+    --color-secondary: #EBB7D4;  /* Pink */
+    --color-accent: #A0C3D2;     /* Light Blue */
+    --color-background: #F7F5F2; /* Off White */
+    --color-text: #2D2D34;       /* Dark Gray */
+}
+
