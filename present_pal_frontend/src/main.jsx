@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage.jsx";
 import ListsPage from "./pages/ListsPage.jsx";
 
 import NavBar from "./components/NavBar.jsx";
+import "./styles.css";
 
 const router = createBrowserRouter([
   {

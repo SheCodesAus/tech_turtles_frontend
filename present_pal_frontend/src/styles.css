@@ -10,3 +10,13 @@
     --color-text: #2D2D34;       /* Dark Gray */
 }
 
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
