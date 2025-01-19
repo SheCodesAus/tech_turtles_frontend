@@ -53,16 +53,16 @@ body {
 }
 
 .button--secondary:hover {
-    background-color: var(--color-secondary);;
+    background-color: var(--color-secondary);
 }
 
 .button--accent {
-    background-color: var(--color-accent)
+    background-color: var(--color-accent);
     color: var(--color-text);
 }
 
 .button--accent:hover {
-    background-color: var(--color-accent)
+    background-color: var(--color-accent);
 }
 
 .button--outline {
@@ -82,7 +82,7 @@ body {
 }
 
 .button--ghost:hover {
-    background-color: var(--color-background)
+    background-color: var(--color-background);
 }
 
 /* Sizes */
