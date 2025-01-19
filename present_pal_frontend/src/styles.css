@@ -24,6 +24,101 @@ body {
     box-sizing: border-box;
 }
 
+/* Button */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    border-radius: 0.375rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+}
+
+/* Variants */
+.button--primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.button--primary:hover {
+    background-color: var(--color-primary);
+}
+
+.button--secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+}
+
+.button--secondary:hover {
+    background-color: var(--color-secondary);;
+}
+
+.button--accent {
+    background-color: var(--color-accent)
+    color: var(--color-text);
+}
+
+.button--accent:hover {
+    background-color: var(--color-accent)
+}
+
+.button--outline {
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.button--outline:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.button--ghost {
+    background-color: transparent;
+    color: var(--color-primary);
+}
+
+.button--ghost:hover {
+    background-color: var(--color-background)
+}
+
+/* Sizes */
+.button--small {
+    font-size: 0.875rem;
+    padding: 0.375rem 0.75rem;
+}
+
+.button--medium {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.button--large {
+    font-size: 1.125rem;
+    padding: 0.75rem 1.5rem;
+}
+
+/* States */
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.button--full-width {
+    width: 100%;
+}
+
+/* Focus state */
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(91, 75, 138, 0.3);
+}
+
+
+/* Footer */
 .footer-container {
     background: var(--gradient-pink);
     position: relative;
