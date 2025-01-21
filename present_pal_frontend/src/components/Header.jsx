@@ -10,6 +10,9 @@ function Header() {
         <div>
             <NavBar></NavBar>
         </div>
+        <div>
+        <img src="tech_turtles_frontend/img/personicon.png" />        
+        </div>    
     </div>
 )}
 
