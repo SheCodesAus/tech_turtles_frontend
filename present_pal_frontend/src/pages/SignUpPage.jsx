@@ -1,13 +1,13 @@
 import React from 'react';
 import SignupForm from '../components/SignupForm';
-import Header from '../components/Header';
+import App from '../components/App';
 import Footer from '../components/Footer';
 import "../styles.css";
 
 function SignUpPage() {
     return (
         <div className="signup-page">
-            <Header />
+            <App />
             <SignupForm />
             <Footer />
         </div>

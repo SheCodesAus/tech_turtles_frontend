@@ -1,6 +1,6 @@
 import React from 'react';
 import LoginForm from '../components/LoginForm';
-import Header from '../components/Header';
+import Header from '../components/App';
 import Footer from '../components/Footer';
 import "../styles.css";
 
