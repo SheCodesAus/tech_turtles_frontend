@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import '../styles.css';
 
 const SignupForm = () => {
@@ -27,7 +27,7 @@ const SignupForm = () => {
 
       <p className="login-text">
         Already Registered?{' '}
-        <a href="/register">Login</a>
+        <a href="/login">Login</a>
       </p>
 
       <form onSubmit={handleSubmit}>
