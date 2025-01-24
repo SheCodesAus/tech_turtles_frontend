@@ -24,6 +24,15 @@ body {
     box-sizing: border-box;
 }
 
+.contents-column {
+	max-width: 1410px;
+	margin: 0 auto;
+	width: 100%;
+	padding: 1em 1rem;
+	background-color: #fff;
+	height: 100%;
+}
+
 /* Navbar Styles */
 /* .navbar {
     background-color: var(--color-primary);
