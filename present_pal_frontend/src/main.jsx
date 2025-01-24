@@ -5,7 +5,8 @@ import HomePage from "./pages/HomePage.jsx";
 import ListsPage from "./pages/ListsPage.jsx";
 
 import App from "./components/App.jsx";
-import "./styles.css";
+// import "./styles.css";
+import "./output.css";
 import SignUpPage from "./pages/SignUpPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 
