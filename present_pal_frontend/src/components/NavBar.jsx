@@ -22,8 +22,7 @@ function NavBar() {
 			<div className="nav-content">
 				<div className="links-desktop">
 					<Link to="/" onClick={closeMenu}>Home</Link>
-					<Link to="#" onClick={closeMenu}>About Us</Link>
-					<Link to="#" onClick={closeMenu}>Create List</Link>
+					<Link to="/create-list" onClick={closeMenu}>Create List</Link>
 				</div>
 				<div className="brand">
 					<Link to="/" className="header-logo">
@@ -51,9 +50,9 @@ function NavBar() {
 					<li>
 						<Link to="/" onClick={closeMenu}>Home</Link>
 					</li>
-					<li>
+					{/* <li>
 						<Link to="#" onClick={closeMenu}>About Us</Link>
-					</li>
+					</li> */}
 					<li>
 						<Link to="#" onClick={closeMenu}>Create List</Link>
 					</li>
