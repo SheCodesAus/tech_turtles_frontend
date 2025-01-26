@@ -1,9 +1,9 @@
-async function getLists() {
-    const url = `${import.meta.env.VITE_API_URL}/lists`;
-    const response = await fetch(url, { method: "GET" });
-
+async function getUsers() {
+    const url = `${import.meta.env.VITE_API_URL}/users}`;
+    const response = await fetch(url, { method: "GET"});
+    
     if (!response.ok) {
-        const fallbackError = "Error fetching lists";
+        const fallbackError = `Error fetching users`;
 
         const data = await response.json().catch(() => {
             throw new Error(fallbackError);
@@ -16,4 +16,4 @@ async function getLists() {
     return await response.json();
 }
 
-export default getLists;
+export default getUsers;
