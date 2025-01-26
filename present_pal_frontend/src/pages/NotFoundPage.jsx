@@ -16,12 +16,6 @@ const NotFoundPage = () => {
                         className="mx-auto rounded-lg shadow-lg w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 object-cover"
                     />
                 </div>
-                {/* <p className="text-2xl font-semibold text-gray-700 mb-4">
-                    Oops! Page not found
-                </p>
-                <p className="text-gray-600 mb-8">
-                    The page you are looking for does not exist or has been moved.
-                </p> */}
                 <div className="space-x-4">
                     <button
                         onClick={() => navigate('/')}
