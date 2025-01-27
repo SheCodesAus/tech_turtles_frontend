@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage.jsx";
-import ListsPage from "./pages/ListsPage.jsx";
+import CreateListPage from "./pages/CreateListPage.jsx";
 
 import App from "./components/App.jsx";
 // import "./styles.css";
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
       element: <App />,
       children: [
           { path: "/", element: <HomePage /> },
-          { path: "/lists", element: <ListsPage /> },
+          { path: "/create-list", element: <CreateListPage /> },
           { path: "/signup", element: <SignUpPage /> },
           { path: "/login", element: <LoginPage /> },
       ],
