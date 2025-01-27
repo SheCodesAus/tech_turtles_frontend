@@ -591,10 +591,6 @@ video {
   display: table;
 }
 
-.h-96 {
-  height: 24rem;
-}
-
 .h-64 {
   height: 16rem;
 }
@@ -613,10 +609,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-96 {
-  width: 24rem;
 }
 
 .max-w-4xl {
@@ -687,14 +679,14 @@ video {
   background-color: rgb(243 232 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
 .bg-purple-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(107 33 168 / var(--tw-bg-opacity, 1));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
 .object-cover {
@@ -731,11 +723,6 @@ video {
 
 .text-center {
   text-align: center;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .text-3xl {
@@ -806,6 +793,10 @@ video {
   outline-style: solid;
 }
 
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -853,7 +844,7 @@ body {
   max-width: 1410px;
   margin: 0 auto;
   width: 100%;
-  padding: 1em 1rem;
+  padding: 1rem 2rem;
   background-color: #fff;
   height: 100%;
 }
@@ -1107,6 +1098,25 @@ body {
   margin-bottom: 20px;
 }
 
+/* Listing Page */
+
+.listing-lists-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: center;
+  /*justify-content: center;*/
+  padding-bottom: 48px;
+}
+
+.listing-title {
+  font-size: 2rem;
+  font-weight: 800;
+  padding: 2rem 0;
+}
+
+;
+
 /* Button Styles */
 
 .button {
@@ -1315,9 +1325,19 @@ body {
 
 /* Media Queries */
 
+@media (max-width: 1024px) {
+  .contents-column {
+    padding: 1rem 1rem;
+  }
+
+  .listing-lists-container {
+    justify-content: center;
+  }
+}
+
 @media (max-width: 768px) {
   .signup-container,
-    .login-container {
+	.login-container {
     margin: 1rem;
     padding: 1rem;
   }
