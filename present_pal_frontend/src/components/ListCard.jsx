@@ -4,8 +4,8 @@ import logoImg from '../assets/logos/logo-pink-bg.png';
 
 function ListCard(props) {
     const { listData } = props;
-    const listLink = `list/${listData.id}`;
-    console.log(listData)
+    const domain = window.location.origin;
+    const listLink = `${domain}/list/${listData.id}`;
 
     return (
         <Link to={listLink}>
