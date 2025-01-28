@@ -19,14 +19,9 @@ const ListsListingPage = () => {
 			<div className="listing-lists-container">
 				{loading && <p className="loading-message">Loading lists...</p>}
 				{error && <p className="error-message">Failed to load lists. Please try again later.</p>}
-				{!loading && !error && currentLists.map((listData, key) => {
-					return <ListCard key={key} listData={listData} />;
+				{!loading && !error && currentLists.map((listData) => {
+					return <ListCard key={listData.id} listData={listData} />;
 				})}
-				{/* {currentLists.map(list => {
-					return (
-						<ListCard key={list.id} listData={list} />
-					)
-				})} */}
 			</div>
 		</div>
 	)
