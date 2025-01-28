@@ -591,10 +591,6 @@ video {
   display: table;
 }
 
-.h-96 {
-  height: 24rem;
-}
-
 .h-64 {
   height: 16rem;
 }
@@ -613,10 +609,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-96 {
-  width: 24rem;
 }
 
 .max-w-4xl {
@@ -687,14 +679,14 @@ video {
   background-color: rgb(243 232 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
 .bg-purple-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(107 33 168 / var(--tw-bg-opacity, 1));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
 .object-cover {
@@ -731,11 +723,6 @@ video {
 
 .text-center {
   text-align: center;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .text-3xl {
@@ -856,6 +843,21 @@ body {
   padding: 1em 1rem;
   background-color: #fff;
   height: 100%;
+}
+
+.body-copy-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+/* List Detail Page Styles */
+
+.list-detail-title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Navbar Styles */
@@ -1317,9 +1319,15 @@ body {
 
 @media (max-width: 768px) {
   .signup-container,
-    .login-container {
+	.login-container {
     margin: 1rem;
     padding: 1rem;
+  }
+
+  .list-detail-title-container {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
   }
 
   .form-options {

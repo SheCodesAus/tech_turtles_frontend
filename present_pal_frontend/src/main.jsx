@@ -8,6 +8,7 @@ import LoginPage from "./pages/LoginPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import CreateListPage from "./pages/CreateListPage.jsx";
+import ListDetailPage from "./pages/ListDetailPage.jsx";
 
 import "./output.css";
 
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
       { path: "/create-list", element: <CreateListPage /> },
       { path: "/signup", element: <SignUpPage /> },
       { path: "/login", element: <LoginPage /> },
+      { path: "/list/:listId", element: <ListDetailPage /> },
       { path: "*", element: <NotFoundPage /> },
     ],
   },

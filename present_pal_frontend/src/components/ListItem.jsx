@@ -7,7 +7,7 @@ import Button from './Button';
 const ListItem = (props) => {
 	return (
 		<div className='list-item--container'>
-			<h3 className='list-item--title'>{props.fullName}</h3>
+			<h3 className='list-item--title'>{props.name}</h3>
 			<ToggleSwitch />
 			<div className='list-item--table-container'>
 				<table className='list-item--table'>
