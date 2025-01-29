@@ -3,13 +3,22 @@ import { createContext, useState } from 'react';
 export const AuthContext = createContext();
 
 export const AuthProvider = (props) => {
-  const [auth, setAuth] = useState({
-    token: window.localStorage.getItem("token"),
-  });
+	const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  return (
-    <AuthContext.Provider value={{ auth, setAuth }}>
-      {props.children}
-    </AuthContext.Provider>
-  );
+	const handleLogin = () => {
+		setIsLoggedIn(true);
+	};
+
+	const handleLogout = () => {
+		localStorage.removeItem('token');
+		localStorage.removeItem('user_id');
+		localStorage.removeItem('email');
+		setIsLoggedIn(false);
+	};
+
+	return (
+		<AuthContext.Provider value={{ isLoggedIn, handleLogin, handleLogout }}>
+			{props.children}
+		</AuthContext.Provider>
+	);
 };
