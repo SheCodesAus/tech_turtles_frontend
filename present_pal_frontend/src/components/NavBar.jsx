@@ -25,7 +25,7 @@ function NavBar() {
 				<div className="links-desktop">
 					<Link to="/" onClick={closeMenu}>Home</Link>
 					<Link to="/create-list" onClick={closeMenu}>Create List</Link>
-					{isLoggedIn && <Link to="/lists" onClick={closeMenu}>My List</Link>}
+					<Link to="/lists" onClick={closeMenu}>My List</Link>
 				</div>
 				<div className="brand">
 					<Link to="/" className="header-logo">
@@ -70,7 +70,9 @@ function NavBar() {
 					<li>
 						<Link to="/create-list" onClick={closeMenu}>Create List</Link>
 					</li>
-					{isLoggedIn && <li><Link to="/lists" onClick={closeMenu}>My List</Link></li>}
+					<li>
+						<Link to="/lists" onClick={closeMenu}>My List</Link>
+					</li>
 				</ul>
 				<div className="slider-footer">
 					{isLoggedIn ? (
