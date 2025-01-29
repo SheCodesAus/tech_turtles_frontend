@@ -7,7 +7,7 @@ const CreateListForm = () => {
 	const [isLoading, setIsLoading] = useState(false);
 	const [errorMessage, setErrorMessage] = useState("");
 	const [formData, setFormData] = useState({
-		list_name: "",
+		name: "",
 		description: "",
 		budget: "",
 	});
@@ -25,7 +25,7 @@ const CreateListForm = () => {
 		setIsLoading(true);
 		setErrorMessage("");
 
-		if (!formData.list_name || !formData.budget) {
+		if (!formData.name || !formData.budget) {
 			setErrorMessage("Please fill in all required fields");
 			setIsLoading(false);
 			return;
@@ -75,9 +75,9 @@ const CreateListForm = () => {
 								List Name
 							</label>
 							<input
-								id="list_name"
+								id="name"
 								type="text"
-								value={formData.list_name}
+								value={formData.name}
 								onChange={handleChange}
 								className="w-full px-4 py-2 border rounded-md"
 								style={{ ':focus': { borderColor: '#5B4B8A', outline: 'none' } }}
