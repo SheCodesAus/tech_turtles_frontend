@@ -1,5 +1,5 @@
 import { Clock, ListTodo, DollarSign, Smile } from 'lucide-react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import present from '../assets/present.png';
 import mobile from '../assets/mobileapp.png';
 
