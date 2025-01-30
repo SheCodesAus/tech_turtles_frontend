@@ -1,9 +1,12 @@
 import { Clock, ListTodo, DollarSign, Smile } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import useAuth from '../hooks/use-auth.js';
 import present from '../assets/present.png';
 import mobile from '../assets/mobileapp.png';
 
 const Homepage = () => {
+	const { isLoggedIn } = useAuth();
+
 	return (
 		<div className="flex flex-col min-h-screen bg-white">
 			{/* Hero Section */}
@@ -21,14 +24,14 @@ const Homepage = () => {
 						<p className="text-gray-700 mb-8">
 							Simple and easy to use. Start planning your gift shopping with PresentPal today.
 						</p>
-						<div className="flex gap-4">
+						{!isLoggedIn && <div className="flex gap-4">
 							<button className="bg-pink-400 text-white px-8 py-3 rounded-md hover:bg-pink-500 transition-colors">
 								<Link to="/signup">JOIN NOW</Link>
 							</button>
 							<button className="border-2 border-gray-300 px-8 py-3 rounded-md hover:bg-gray-50 transition-colors">
 								<Link to="/login">LOG IN</Link>
 							</button>
-						</div>
+						</div>}
 					</div>
 
 					<div className="flex-1 flex justify-center">

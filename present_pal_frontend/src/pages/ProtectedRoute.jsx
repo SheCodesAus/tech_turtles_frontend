@@ -1,17 +1,15 @@
 import { Navigate, useLocation } from 'react-router-dom';
+import useAuth from '../hooks/use-auth.js';
 
 const ProtectedRoute = ({ children }) => {
-  const location = useLocation();
-  
-  const isAuthenticated = () => {
-    return localStorage.getItem('token') !== null;
-  };
+	const location = useLocation();
+	const { isLoggedIn } = useAuth();
 
-  if (!isAuthenticated()) {
-    return <Navigate to="/login" state={{ from: location }} replace />;
-  }
+	if (!isLoggedIn) {
+		return <Navigate to="/login" state={{ from: location }} replace />;
+	}
 
-  return children;
+	return children;
 };
 
 export default ProtectedRoute;

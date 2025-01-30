@@ -8,6 +8,7 @@ import NotFoundPage from "./pages/NotFoundPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import CreateListPage from "./pages/CreateListPage.jsx";
 import ListsListingPage from "./pages/ListsListingPage.jsx";
+import ListDetailPage from "./pages/ListDetailPage.jsx";
 import { AuthProvider } from "./components/AuthProvider.jsx";
 import ProtectedRoute from "./pages/ProtectedRoute.jsx";
 import "./output.css";
@@ -18,10 +19,11 @@ const router = createBrowserRouter([
 		element: <App />,
 		children: [
 			{ path: "/", element: <HomePage /> },
-			{ path: "/create-list", element: <CreateListPage /> },
+			{ path: "/create-list", element: <ProtectedRoute><CreateListPage /></ProtectedRoute> },
 			{ path: "/signup", element: <SignUpPage /> },
 			{ path: "/login", element: <LoginPage /> },
 			{ path: "/lists", element: <ProtectedRoute><ListsListingPage /></ProtectedRoute> },
+			{ path: "/lists/:listId", element: <ProtectedRoute><ListDetailPage /></ProtectedRoute> },
 			{ path: "*", element: <NotFoundPage /> },
 		],
 	},

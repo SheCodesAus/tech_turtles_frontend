@@ -6,7 +6,7 @@ import '../styles.css';
 
 const LoginForm = () => {
 	const navigate = useNavigate();
-	const { setAuth } = useAuth();
+	const { handleLogin } = useAuth();
 
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState("");
@@ -28,9 +28,8 @@ const LoginForm = () => {
 			.then((response) => {
 				window.localStorage.setItem("token", response.token);
 				window.localStorage.setItem("userId", response.user_id);
-				setAuth({
-					token: response.token,
-				});
+				window.localStorage.setItem("email", response.email);
+				handleLogin();
 				navigate(location.state?.from || "/");
 			})
 			.catch(() => {

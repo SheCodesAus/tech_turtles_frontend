@@ -39,7 +39,7 @@ const CreateListForm = () => {
 		try {
 			const response = await postList(listData);
 			if (response.id) {
-				navigate(`/list/${response.id}`);
+				navigate(`/lists/${response.id}`);
 			} else {
 				throw new Error("Failed to create list");
 			}
