@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import './ToggleSwitch.css';
 
-const ToggleSwitch = () => {
-	const [isChecked, setIsChecked] = useState(false);
+const ToggleSwitch = ({ onToggle }) => {
+	const [isChecked, setIsChecked] = useState(true);
 
 	return (
 		<button
 			className={`toggle-btn ${isChecked ? 'toggled' : ''}`}
-			onClick={() => setIsChecked(!isChecked)}>
+			onClick={() => {
+				onToggle();
+				setIsChecked(!isChecked);
+			}}>
 			<div className="thumb"></div>
 		</button>
 	);
