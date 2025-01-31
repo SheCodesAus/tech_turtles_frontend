@@ -47,7 +47,7 @@ const ListDetailPage = () => {
 						<h1 className="text-2xl md:text-3xl font-bold">{`Budget Summary: $${parseFloat(list.budget).toFixed(2)}`}</h1>
 					</div>
 					{list.recipients.length > 0 && list.recipients.map(recipient => {
-						return <ListItem recipient={recipient} key={recipient.id} onSave={refetchList} />
+						return <ListItem recipient={recipient} key={recipient.id} refreshList={refetchList} />
 					})}
 					{list.recipients.length === 0 && <div className="flex flex-row items-center justify-center">
 						<h3 className="text-lg font-semibold text-gray-950">You currently do not have any recipient.</h3>

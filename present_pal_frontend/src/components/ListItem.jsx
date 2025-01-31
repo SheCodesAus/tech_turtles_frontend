@@ -4,6 +4,8 @@ import './ListItem.css';
 import React, { useState } from 'react';
 import postItem from '../api/post-item.js'
 import putItem from '../api/put-item.js'
+import putRecipient from '../api/put-recipient.js';
+import deleteRecipient from '../api/delete-recipient.js';
 import Modal from '../components/Modal.jsx';
 
 const ListItem = (props) => {
@@ -35,7 +37,7 @@ const ListItem = (props) => {
 	const handleSave = async () => {
 		try {
 			await postItem(itemData);
-			await props.onSave();
+			await props.refreshList();
 			setItemData({
 				name: '',
 				cost: 0,
@@ -48,6 +50,15 @@ const ListItem = (props) => {
 		}
 	};
 
+	const handleDeleteRecipient = async () => {
+		try {
+			await deleteRecipient(recipient.id);
+			props.refreshList();
+		} catch (error) {
+			console.error('Failed to delete recipient:', error);
+		}
+	}
+
 	const handleInputChange = (e) => {
 		setItemData({
 			...itemData,
@@ -58,7 +69,13 @@ const ListItem = (props) => {
 	return (
 		<div className='list-item--container mb-8'>
 			<h3 className='list-item--title text-gray-950 font-semibold text-xl'>{recipient.name}</h3>
-			<ToggleSwitch />
+			<ToggleSwitch onToggle={() => {
+				putRecipient(recipient.id, { is_open: !recipient.is_open })
+				setRecipient(prev => ({
+					...prev,
+					is_open: !prev.is_open
+				}))
+			}} />
 
 			{/* Desktop Table View */}
 			<div className="hidden md:grid md:grid-cols-4 gap-4 mb-4">
@@ -117,7 +134,10 @@ const ListItem = (props) => {
 						<span>Add more item</span>
 						<CirclePlus color="#5B4B8A" size={24} />
 					</div>
-					<div className="flex items-center gap-2 justify-end cursor-pointer">
+					<div
+						className="flex items-center gap-2 justify-end cursor-pointer"
+						onClick={handleDeleteRecipient}
+					>
 						<span>Remove recipient</span>
 						<Trash2 color="#5B4B8A" size={24} />
 					</div>
