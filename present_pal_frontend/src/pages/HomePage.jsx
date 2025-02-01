@@ -4,7 +4,7 @@ import useAuth from '../hooks/use-auth.js';
 import present from '../assets/present.png';
 import mobile from '../assets/mobileapp.png';
 
-const Homepage = () => {
+const HomePage = () => {
 	const { isLoggedIn } = useAuth();
 
 	return (
