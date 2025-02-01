@@ -1,9 +1,10 @@
-import { createContext, useState } from 'react';
-
-export const AuthContext = createContext();
+import { useState } from 'react';
+import { AuthContext } from '../contexts/AuthContext';
 
 export const AuthProvider = (props) => {
-	const [isLoggedIn, setIsLoggedIn] = useState(false);
+	const [isLoggedIn, setIsLoggedIn] = useState(() => {
+		return localStorage.getItem('token') !== null;
+	});
 
 	const handleLogin = () => {
 		setIsLoggedIn(true);
