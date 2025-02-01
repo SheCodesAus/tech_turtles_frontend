@@ -26,7 +26,7 @@ const Modal = ({ isOpen, onClose, onSave, children }) => {
               onSave();
               onClose();
             }}
-            className="px-4 py-1 bg-pink-400 text-gray-950 hover:bg-pink-600"
+            className="px-4 py-1 bg-pink-200 text-gray-950 hover:bg-pink-600"
           >
             Save
           </button>
