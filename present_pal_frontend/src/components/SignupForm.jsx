@@ -9,7 +9,8 @@ const SignupForm = () => {
 		email: '',
 		password: '',
 		confirmPassword: '',
-		dateOfBirth: ''
+		firstName: '',
+		lastName: ''
 	});
 
 	const [loading, setLoading] = useState(false);
@@ -41,7 +42,9 @@ const SignupForm = () => {
 			await postSignup(
 				formData.username,
 				formData.email,
-				formData.password
+				formData.password,
+				formData.firstName,
+				formData.lastName
 			);
 
 			alert("Registration successful! Please log in.");
@@ -101,6 +104,30 @@ const SignupForm = () => {
 				</div>
 
 				<div className="form-group">
+					<label htmlFor="firstName">FIRST NAME</label>
+					<input
+						type="text"
+						id="firstName"
+						name="firstName"
+						value={formData.firstName}
+						onChange={handleChange}
+						required
+					/>
+				</div>
+
+				<div className="form-group">
+					<label htmlFor="lastName">LAST NAME</label>
+					<input
+						type="text"
+						id="lastName"
+						name="lastName"
+						value={formData.lastName}
+						onChange={handleChange}
+						required
+					/>
+				</div>
+
+				<div className="form-group">
 					<label htmlFor="password">PASSWORD</label>
 					<input
 						type="password"
@@ -120,18 +147,6 @@ const SignupForm = () => {
 						id="confirmPassword"
 						name="confirmPassword"
 						value={formData.confirmPassword}
-						onChange={handleChange}
-						required
-					/>
-				</div>
-
-				<div className="form-group">
-					<label htmlFor="dateOfBirth">DATE OF BIRTH</label>
-					<input
-						type="date"
-						id="dateOfBirth"
-						name="dateOfBirth"
-						value={formData.dateOfBirth}
 						onChange={handleChange}
 						required
 					/>

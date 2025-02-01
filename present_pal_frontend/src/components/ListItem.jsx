@@ -177,7 +177,7 @@ const ListItem = (props) => {
 			<div className="flex justify-end">
 				<div className="flex flex-col gap-2">
 					<div className="flex items-center gap-2 justify-end cursor-pointer" onClick={() => setIsModalOpen(true)}>
-						<span>Add more item</span>
+						<span>Add another item</span>
 						<CirclePlus color="#5B4B8A" size={24} />
 					</div>
 					<div
