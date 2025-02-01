@@ -5,8 +5,6 @@
 ### Tech Turtles
 
 - [PresentPal](#presentpal)
-  - [Plan. Shop. Joy. 🎄✨](#plan-shop-joy-)
-    - [Tech Turtles](#tech-turtles)
   - [Project Overview 🎁](#project-overview-)
   - [Mission Statement 🔊](#mission-statement-)
   - [Features 📋](#features-)
@@ -56,7 +54,7 @@ PresentPal’s mission is to simplify holiday/event gift shopping by providing a
 - Accessibility for colour blind users
 - Management of budget (total spent)
 - Custom 404 page
- Responsive design
+- Responsive design
 
 ### Must haves
 
@@ -190,6 +188,18 @@ The secondary users are gift recipients, who can join in by creating their own w
 2. As a gift recipient, I want to edit my gift list so that I can keep it up to date.
 
 ## Front-end Implementation
+
+### Front-end Navigation Structure 📍
+
+| Route              | Component        | Purpose                | Access Control                   |
+|--------------------|------------------|------------------------|----------------------------------|
+| **/**              | HomePage         | Displays homepage      | Public                           |
+| **/signup**        | SignUpPage       | User registration page | Public                           |
+| **/login**         | LoginPage        | User login page        | Public                           |
+| **/create-list**   | CreateListPage   | Allows users to create a new list      | Protected (logged in users only) |
+| **/lists**         | ListsListingPage | Shows all lists a user has access to      | Protected (logged in users only) |
+| **/lists/:listId** | ListDetailPage   | Displays details of a specific list      | Protected (logged in users only) |
+| ***\****             | NotFoundPage     | Handles unknown routes      | Public                           |
 
 ### Wireframes 🖼️
 
