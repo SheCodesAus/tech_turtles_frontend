@@ -24,9 +24,10 @@ const router = createBrowserRouter([
 			{ path: "/login", element: <LoginPage /> },
 			{ path: "/lists", element: <ProtectedRoute><ListsListingPage /></ProtectedRoute> },
 			{ path: "/lists/:listId", element: <ProtectedRoute><ListDetailPage /></ProtectedRoute> },
-			{ path: "*", element: <NotFoundPage /> },
+			// { path: "*", element: <NotFoundPage /> },
 		],
 	},
+	{ path: "*", element: <NotFoundPage /> } 
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
