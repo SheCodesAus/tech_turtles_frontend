@@ -9,6 +9,7 @@ import HomePage from "./pages/HomePage.jsx";
 import CreateListPage from "./pages/CreateListPage.jsx";
 import ListsListingPage from "./pages/ListsListingPage.jsx";
 import ListDetailPage from "./pages/ListDetailPage.jsx";
+import SharedDetailPage from "./pages/SharedDetailPage.jsx";
 import { AuthProvider } from "./components/AuthProvider.jsx";
 import ProtectedRoute from "./pages/ProtectedRoute.jsx";
 import "./output.css";
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
 			{ path: "/login", element: <LoginPage /> },
 			{ path: "/lists", element: <ProtectedRoute><ListsListingPage /></ProtectedRoute> },
 			{ path: "/lists/:listId", element: <ProtectedRoute><ListDetailPage /></ProtectedRoute> },
+			{ path: "/recipients/:uuid", element: <SharedDetailPage /> },
 			{ path: "*", element: <NotFoundPage /> },
 		],
 	},
