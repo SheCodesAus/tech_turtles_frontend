@@ -44,7 +44,7 @@ const ListDetailPage = () => {
 				<>
 					<div className="flex flex-col items-start md:items-center md:flex-row justify-evenly md:justify-between mb-8">
 						<h1 className="text-2xl md:text-3xl font-bold">{list.name}</h1>
-						<h1 className="text-2xl md:text-3xl font-bold">{`Budget Summary: $${parseFloat(list.budget).toFixed(2)}`}</h1>
+						<h1 className="text-2xl md:text-3xl font-bold">{`Budget: $${parseFloat(list.budget).toFixed(2)}`}</h1>
 					</div>
 					{list.recipients.length > 0 && list.recipients.map(recipient => {
 						return <ListItem recipient={recipient} key={recipient.id} refreshList={refetchList} />
