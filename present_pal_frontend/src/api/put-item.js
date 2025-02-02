@@ -1,4 +1,4 @@
-async function putItem(itemId, newStatus) {
+async function putItem(itemId, data) {
 	const url = `${import.meta.env.VITE_API_URL}/items/${itemId}/`;
 	const token = localStorage.getItem("token");
 	const response = await fetch(url, {
@@ -7,9 +7,7 @@ async function putItem(itemId, newStatus) {
 			'Authorization': `Token ${token}`,
 			'Content-Type': 'application/json',
 		},
-        body: JSON.stringify({
-            status: newStatus,
-        }),
+        body: JSON.stringify(data),
 	});
 
 	if (!response.ok) {
