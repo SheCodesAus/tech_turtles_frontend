@@ -5,6 +5,7 @@ import postRecipient from '../api/post-recipient.js';
 import Button from '../components/Button.jsx';
 import { useState, useEffect, useMemo } from 'react';
 import Modal from '../components/Modal';
+import "../styles.css";
 
 const ListDetailPage = () => {
   const { listId } = useParams();

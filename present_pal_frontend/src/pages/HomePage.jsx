@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../hooks/use-auth.js';
 import present from '../assets/present.png';
 import mobile from '../assets/mobileapp.png';
+import "../styles.css";
 
 const HomePage = () => {
 	const { isLoggedIn } = useAuth();

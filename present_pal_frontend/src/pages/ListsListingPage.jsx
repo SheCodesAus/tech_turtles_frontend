@@ -1,5 +1,6 @@
 import ListCard from '../components/ListCard'
 import useLists from '../hooks/use-lists';
+import "../styles.css";
 
 const ListsListingPage = () => {
 	const { lists, loading, error } = useLists();

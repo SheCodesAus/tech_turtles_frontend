@@ -4,7 +4,7 @@ import Button from './Button'
 import { Link } from "react-router-dom";
 import logoImg from '../assets/logos/logo-pink-bg.png';
 import useAuth from "../hooks/use-auth.js";
-import './NavBar.css';
+import '../styles.css';
 
 function NavBar() {
 	const [isOpen, setIsOpen] = useState(false);

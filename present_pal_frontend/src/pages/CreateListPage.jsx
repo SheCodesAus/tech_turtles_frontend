@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import CreateListForm from "../components/CreateListForm";
+import "../styles.css";
 
 const CreateListPage = () => {
 
